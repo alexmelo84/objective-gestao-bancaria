@@ -1,0 +1,31 @@
+services:
+  api:
+    image: shinsenter/laravel:latest
+    container_name: objective-gestao-bancaria
+    stdin_open: true
+    tty: true
+    build: .
+    ports:
+      - 8000:80
+    working_dir: /var/www/html
+    depends_on:
+      - bd
+    volumes: 
+      - ./api:/var/www/html
+  bd:
+    image: mysql
+    container_name: db-objective-gestao-bancaria
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - objective-gestao-bancaria-db:/var/lib/mysql
+volumes:
+  objective-gestao-bancaria-db:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ${PWD}/db

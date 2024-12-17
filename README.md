@@ -35,4 +35,14 @@ NOTICE: fpm is running, pid 5166
 NOTICE: ready to handle connections
 ```
 
+As migrations precisam rodar manualmente por algum problema que não consegui resolver com o autorun da imagem Docker. Acesse o container:
+```
+docker exec -it objective-gestao-bancaria sh
+```
+
+E então execute a migration:
+```
+/var/www/html# php artisan migrate
+```
+
 A aplicação rodará na porta *:8000* então toda ass chamadas deverão ser feitas via Postman ou aplicações semelhantes através dessa porta.

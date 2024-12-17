@@ -1,6 +1,5 @@
 services:
   api:
-    image: shinsenter/laravel:latest
     container_name: objective-gestao-bancaria
     stdin_open: true
     tty: true
@@ -12,6 +11,9 @@ services:
       - bd
     volumes: 
       - ./api:/var/www/html
+    environment:
+      APP_UID: "1002"
+      APP_GID: "1002"
   bd:
     image: mysql
     container_name: db-objective-gestao-bancaria

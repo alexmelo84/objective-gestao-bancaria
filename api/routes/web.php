@@ -10,4 +10,5 @@ Route::get('/', function () {
 Route::controller(AccountController::class)->group(function () {
     Route::get('/conta', 'searchAccounts');
     Route::get('/conta/{id}', 'getAccountByID');
+    Route::post('/conta', 'createAccount');
 });

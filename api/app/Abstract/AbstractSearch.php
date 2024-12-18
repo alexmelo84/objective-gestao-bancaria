@@ -2,8 +2,6 @@
 
 namespace App\Abstract;
 
-use stdClass;
-
 /**
  * Abstraction for any kind of search
  */

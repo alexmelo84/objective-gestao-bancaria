@@ -35,6 +35,11 @@ class GetAccountById implements GetItemInterface
      */
     public function get(): array
     {
+        $account = Account::where($this->field, $this->value)->get()->first();
+        if (empty($account)) {
+            abort(404);
+        }
+
         return Account::where($this->field, $this->value)->get()->first()->toArray();
     }
 }

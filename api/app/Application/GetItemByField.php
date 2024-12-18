@@ -24,7 +24,7 @@ class GetItemByField implements GetItemByFieldInterface
     }
 
     /**
-     * 
+     * @return array
      */
     public function get(): array
     {

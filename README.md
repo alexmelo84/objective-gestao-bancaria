@@ -56,3 +56,7 @@ Há uma coleção do Postman com os endpoints utilizados no diretório */api/res
 - no endpoint *GET /conta/{id}* foi usada a inversão de dependência, onde a classe depende de interface, não de classe concreta.
 
 - no endpoint *POST /transacao* foi utilizado o desing pattern [abstract factory](https://refactoring.guru/design-patterns/abstract-factory/php/example#example-1).
+
+## Tests
+
+Não consegui fazer os testes, foquei mais na arquitetura e conceitos e faltou tempo.

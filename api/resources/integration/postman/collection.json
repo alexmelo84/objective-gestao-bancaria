@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "44631bdb-2580-427b-95f8-93f175112b8c",
+		"name": "Objective - Gestão Bancária",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11723436"
+	},
+	"item": [
+		{
+			"name": "Conta",
+			"item": [
+				{
+					"name": "Busca contas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/conta?numero_conta=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conta"
+							],
+							"query": [
+								{
+									"key": "numero_conta",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/conta?numero_conta=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"conta"
+									],
+									"query": [
+										{
+											"key": "numero_conta",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2024 19:40:45 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Im1OUzFabjY1bDhWeEc1SEFWYmxFUHc9PSIsInZhbHVlIjoibDZHdlFqcE9RYXk1QWk4UzU5R05KeEVhc2xMemdYN0hXcm1zeUVqdzlzUFNOOWpkQmJsOGZXaEJhTzQ0UnVIRGR6QVlzM3Bsay9GTHBQMzB1R1p0UE52dS94aHU1amhIZFRiTUV4NktIWkF0UTRqMXBIU3FRWS9GeFFtdGNid3MiLCJtYWMiOiI0M2NiYWM5YTkxMDFmYmE4OTRjODY1ODg4NDIyYzAyNGY1MmYzZTEwNjEzYWI3ZTliMzM5N2ZiODA2OGY0YWMwIiwidGFnIjoiIn0%3D; expires=Tue, 17 Dec 2024 21:40:45 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IjgrVUNLTE8wMkt6eFpCY2VLcTd1NkE9PSIsInZhbHVlIjoiMHRkRjRscU00cHRsR1dxWDg4QkFOSFduSXE1MnhTTEpIZGxCZU9Ra29RMmsvSGpFOHFZNURoclRsdFNVZlE2ZFd2N2c1QWhKcnpmM1JBaU5FQjBCN0RIR3gvVmVvQzFHa2piYWhUSW1jV1NCNlBxelgvK1NmY0dCTmRMbVJ0OWMiLCJtYWMiOiJjZDMxZjIwZjZhZDRlNjEzYjNmMTNjNGMwYjNlMzkwMzdmYjk2Y2E0NDJjODE4ZmNlODQ0YzE3NTY4NjFjYzJmIiwidGFnIjoiIn0%3D; expires=Tue, 17 Dec 2024 21:40:45 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "interest-cohort=()"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "HTTP/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application/json\r\nDate:          Tue, 17 Dec 2024 19:40:45 GMT\r\n\r\n{\"abc\":\"def\"}"
+						}
+					]
+				},
+				{
+					"name": "Pega conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/conta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conta",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/conta?numero_conta=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"conta"
+									],
+									"query": [
+										{
+											"key": "numero_conta",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2024 19:40:45 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Im1OUzFabjY1bDhWeEc1SEFWYmxFUHc9PSIsInZhbHVlIjoibDZHdlFqcE9RYXk1QWk4UzU5R05KeEVhc2xMemdYN0hXcm1zeUVqdzlzUFNOOWpkQmJsOGZXaEJhTzQ0UnVIRGR6QVlzM3Bsay9GTHBQMzB1R1p0UE52dS94aHU1amhIZFRiTUV4NktIWkF0UTRqMXBIU3FRWS9GeFFtdGNid3MiLCJtYWMiOiI0M2NiYWM5YTkxMDFmYmE4OTRjODY1ODg4NDIyYzAyNGY1MmYzZTEwNjEzYWI3ZTliMzM5N2ZiODA2OGY0YWMwIiwidGFnIjoiIn0%3D; expires=Tue, 17 Dec 2024 21:40:45 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IjgrVUNLTE8wMkt6eFpCY2VLcTd1NkE9PSIsInZhbHVlIjoiMHRkRjRscU00cHRsR1dxWDg4QkFOSFduSXE1MnhTTEpIZGxCZU9Ra29RMmsvSGpFOHFZNURoclRsdFNVZlE2ZFd2N2c1QWhKcnpmM1JBaU5FQjBCN0RIR3gvVmVvQzFHa2piYWhUSW1jV1NCNlBxelgvK1NmY0dCTmRMbVJ0OWMiLCJtYWMiOiJjZDMxZjIwZjZhZDRlNjEzYjNmMTNjNGMwYjNlMzkwMzdmYjk2Y2E0NDJjODE4ZmNlODQ0YzE3NTY4NjFjYzJmIiwidGFnIjoiIn0%3D; expires=Tue, 17 Dec 2024 21:40:45 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "interest-cohort=()"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "HTTP/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application/json\r\nDate:          Tue, 17 Dec 2024 19:40:45 GMT\r\n\r\n{\"abc\":\"def\"}"
+						}
+					]
+				},
+				{
+					"name": "Cria conta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "FblKlJ6bKZ7BfC7WqQ5pNo2hsjOZg4ngJgVaSBu8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"numero_conta\":4,\"saldo\":400.00}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/conta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conta"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/conta?numero_conta=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"conta"
+									],
+									"query": [
+										{
+											"key": "numero_conta",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2024 19:40:45 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Im1OUzFabjY1bDhWeEc1SEFWYmxFUHc9PSIsInZhbHVlIjoibDZHdlFqcE9RYXk1QWk4UzU5R05KeEVhc2xMemdYN0hXcm1zeUVqdzlzUFNOOWpkQmJsOGZXaEJhTzQ0UnVIRGR6QVlzM3Bsay9GTHBQMzB1R1p0UE52dS94aHU1amhIZFRiTUV4NktIWkF0UTRqMXBIU3FRWS9GeFFtdGNid3MiLCJtYWMiOiI0M2NiYWM5YTkxMDFmYmE4OTRjODY1ODg4NDIyYzAyNGY1MmYzZTEwNjEzYWI3ZTliMzM5N2ZiODA2OGY0YWMwIiwidGFnIjoiIn0%3D; expires=Tue, 17 Dec 2024 21:40:45 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IjgrVUNLTE8wMkt6eFpCY2VLcTd1NkE9PSIsInZhbHVlIjoiMHRkRjRscU00cHRsR1dxWDg4QkFOSFduSXE1MnhTTEpIZGxCZU9Ra29RMmsvSGpFOHFZNURoclRsdFNVZlE2ZFd2N2c1QWhKcnpmM1JBaU5FQjBCN0RIR3gvVmVvQzFHa2piYWhUSW1jV1NCNlBxelgvK1NmY0dCTmRMbVJ0OWMiLCJtYWMiOiJjZDMxZjIwZjZhZDRlNjEzYjNmMTNjNGMwYjNlMzkwMzdmYjk2Y2E0NDJjODE4ZmNlODQ0YzE3NTY4NjFjYzJmIiwidGFnIjoiIn0%3D; expires=Tue, 17 Dec 2024 21:40:45 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "interest-cohort=()"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "HTTP/1.0 200 OK\r\nCache-Control: no-cache, private\r\nContent-Type:  application/json\r\nDate:          Tue, 17 Dec 2024 19:40:45 GMT\r\n\r\n{\"abc\":\"def\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transação",
+			"item": [
+				{
+					"name": "Cria transação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "FblKlJ6bKZ7BfC7WqQ5pNo2hsjOZg4ngJgVaSBu8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"forma_pagamento\":\"D\",\"numero_conta\":789,\"valor\":10}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/transacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transacao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

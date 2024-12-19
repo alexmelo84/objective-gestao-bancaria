@@ -46,3 +46,13 @@ E então execute a migration:
 ```
 
 A aplicação rodará na porta *:8000* então toda ass chamadas deverão ser feitas via Postman ou aplicações semelhantes através dessa porta.
+
+Há uma coleção do Postman com os endpoints utilizados no diretório */api/resources/integration/postman/collection.json*.
+
+## Conceitos utilizados
+
+- nos endpoint *GET /conta?numero_conta={id}* e *POST /conta* são feitas operações SQL com os campos da requisição;
+
+- no endpoint *GET /conta/{id}* foi usada a inversão de dependência, onde a classe depende de interface, não de classe concreta.
+
+- no endpoint *POST /transacao* foi utilizado o desing pattern [abstract factory](https://refactoring.guru/design-patterns/abstract-factory/php/example#example-1).

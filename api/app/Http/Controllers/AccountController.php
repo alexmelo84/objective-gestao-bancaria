@@ -35,7 +35,7 @@ class AccountController extends Controller
      */
     public function getAccountByID(): string
     {
-        $objGetAccount = new GetAccountById('id', request()->route('id'));
+        $objGetAccount = new GetAccountById(request()->route('id'));
         $objGetItem = new GetItemByField($objGetAccount);
 
         return response()->json($objGetItem->get())->getContent();
@@ -49,7 +49,6 @@ class AccountController extends Controller
      */
     public function createAccount(Request $request): string
     {
-        // dd($request->saldo);
         $createAccount = new CreateAccount($request->all());
 
         return response()->json($createAccount->create(), 201)->getContent();

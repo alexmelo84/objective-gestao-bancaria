@@ -6,14 +6,14 @@ use App\Interfaces\GetItemInterface;
 use App\Models\Account;
 
 /**
- * Get an account by its ID
+ * Get an account by its number
  */
-class GetAccountById implements GetItemInterface
+class GetAccountByNumber implements GetItemInterface
 {
     /**
      * string $field
      */
-    private string $field = 'id';
+    private string $field = 'numero_conta';
 
     /**
      * int $value

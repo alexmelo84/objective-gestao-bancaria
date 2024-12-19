@@ -20,10 +20,7 @@ class TransactionController extends Controller
             $request->numero_conta,
             $request->valor
         );
-        $createTransaction->create();
 
-        // return response()->json($createAccount->create(), 201)->getContent();
-
-        return '';
+        return response()->json($createTransaction->create(), 201)->getContent();
     }
 }

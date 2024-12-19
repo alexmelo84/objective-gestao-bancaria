@@ -85,6 +85,10 @@ class CreateTransaction extends AbstractTransaction
         }
 
         $account = $this->getAccountByNumber($this->accountNumber);
-        dd($account);
+
+        return [
+            'numero_conta' => $account['numero_conta'],
+            'saldo' => $account['saldo']
+        ];
     }
 }

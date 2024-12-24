@@ -2,6 +2,8 @@
 
 Esse é um projeto para o desafio técnico de gestão bancária da Objective.
 
+Os requisitos do teste podem ser encontrados no diretório */api/resources/requirements/*.
+
 ## Stack
 
 Roda em um container Docker com a [imagem](https://hub.docker.com/r/shinsenter/laravel).
@@ -59,4 +61,28 @@ Há uma coleção do Postman com os endpoints utilizados no diretório */api/res
 
 ## Tests
 
-Não consegui fazer os testes, foquei mais na arquitetura e conceitos e faltou tempo.
+Há um teste de exemplo para a classe *CreateAccount*. Para rodar os testes, execute o comando:
+
+```
+docker exec objective-gestao-bancaria ./vendor/bin/phpunit
+```
+
+Ou acesse a imagem e execute o comando diretamente nela:
+
+```
+docker exec -it objective-gestao-bancaria sh
+```
+
+E então rode o teste:
+
+- utlizando o PHPUnit:
+
+```
+./vendor/bin/phpunit
+```
+
+- utilizando o artisan:
+
+```
+php artisan test
+```

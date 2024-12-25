@@ -15,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/api/conta?numero_conta=2",
+							"raw": "http://localhost:8000/api/conta",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -28,7 +28,8 @@
 							"query": [
 								{
 									"key": "numero_conta",
-									"value": "2"
+									"value": "2",
+									"disabled": true
 								}
 							]
 						}
@@ -245,7 +246,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"numero_conta\":4,\"saldo\":400.00}",
+							"raw": "{\"numero_conta\":6,\"saldo\":600.00}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -390,6 +391,41 @@
 							"path": [
 								"api",
 								"transacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Saque Caixa Eletrônico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "FblKlJ6bKZ7BfC7WqQ5pNo2hsjOZg4ngJgVaSBu8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"forma_pagamento\":\"S\",\"numero_conta\":1,\"valor\":10}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/saque-caixa-eletronico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"saque-caixa-eletronico"
 							]
 						}
 					},

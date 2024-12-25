@@ -6,6 +6,7 @@ enum TransactionEnum: string {
     case P = 'Pix';
     case C = 'Cartão de Crédito';
     case D = ' Cartão de Débito';
+    case S = ' Sque em Caixa Eletrônico';
 
     /**
      * @return array
@@ -15,7 +16,8 @@ enum TransactionEnum: string {
         return [
             self::P->name,
             self::C->name,
-            self::D->name
+            self::D->name,
+            self::S->name
         ];
     }
 }

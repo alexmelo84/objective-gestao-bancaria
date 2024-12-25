@@ -10,6 +10,7 @@ class Account extends Model
      * @var array $visible
      */
     protected $visible = [
+        'id',
         'numero_conta',
         'saldo'
     ];

@@ -17,4 +17,5 @@ Route::controller(AccountController::class)->group(function () {
 
 Route::controller(TransactionController::class)->group(function () {
     Route::post('/transacao', 'createTransaction');
+    Route::post('/saque-caixa-eletronico', 'withdrawAtm');
 });

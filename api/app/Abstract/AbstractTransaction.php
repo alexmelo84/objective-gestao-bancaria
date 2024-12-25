@@ -10,6 +10,8 @@ use App\Enum\TransactionEnum;
 use App\Factory\CreditTransactionFactory;
 use App\Factory\DebitTransactionFactory;
 use App\Factory\PixTransactionFactory;
+use App\Factory\WithdrawAtmFactory;
+use App\Interfaces\TransactionATMFactoryInterface;
 use App\Interfaces\TransactionFactoryInterface;
 
 /**
@@ -84,9 +86,9 @@ abstract class AbstractTransaction
     }
 
     /**
-     * @return TransactionFactoryInterface
+     * @return TransactionFactoryInterface|TransactionATMFactoryInterface
      */
-    protected function getTransctionMethodFactory(): TransactionFactoryInterface
+    protected function getTransctionMethodFactory(): TransactionFactoryInterface|TransactionATMFactoryInterface
     {
         switch ($this->transactionMethod) {
             case TransactionEnum::C->name:
@@ -97,6 +99,9 @@ abstract class AbstractTransaction
                 break;
             case TransactionEnum::P->name:
                 return new PixTransactionFactory;
+                break;
+            case TransactionEnum::S->name:
+                return new WithdrawAtmFactory;
                 break;
         }
     }

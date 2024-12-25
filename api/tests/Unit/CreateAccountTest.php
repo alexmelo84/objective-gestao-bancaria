@@ -15,6 +15,11 @@ class CreateAccountTest extends TestCase
 
     public function testCreateAccountSuccess()
     {
+        $expected = [
+            'numero_conta' => '1',
+            'saldo' => 1000,
+            'id' => 1
+        ];
         $input = [
             'numero_conta' => '1',
             'saldo' => 1000
@@ -47,7 +52,7 @@ class CreateAccountTest extends TestCase
                       ->willReturn(true);
 
         $result = $createAccount->create();
-        $this->assertEquals($input, $result);
+        $this->assertEquals($expected, $result);
     }
 
     public function testCreateAccountMissingField()
